@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WWA - Web address opener PWA. Open any website directly from your home screen.">
+    <meta name="theme-color" content="#2196F3">
+    
+    <title>WWA - Web Address Opener</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232196F3' width='192' height='192'/><text x='96' y='120' font-size='100' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'>W</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%232196F3' width='192' height='192'/><text x='96' y='120' font-size='100' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'>W</text></svg>">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WWA</h1>
+            <p class="subtitle">Web Address Opener</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="urlInput" 
+                    placeholder="Paste or type a web address..." 
+                    class="url-input"
+                    autocomplete="off"
+                >
+                <button id="openBtn" class="btn-primary">Open</button>
+            </div>
+
+            <div class="recent-section">
+                <h2>Recent URLs</h2>
+                <div id="recentList" class="recent-list">
+                    <p class="empty-state">No recent URLs yet</p>
+                </div>
+                <button id="clearBtn" class="btn-secondary" style="display: none;">Clear History</button>
+            </div>
+
+            <div class="shortcuts-section">
+                <h2>Quick Shortcuts</h2>
+                <div id="shortcutsList" class="shortcuts-list">
+                    <button class="shortcut-btn" data-url="https://google.com">Google</button>
+                    <button class="shortcut-btn" data-url="https://github.com">GitHub</button>
+                    <button class="shortcut-btn" data-url="https://youtube.com">YouTube</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>WWA v1.0 - Works offline</p>
+            <button id="installBtn" class="btn-install" style="display: none;">Install App</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
